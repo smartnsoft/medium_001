@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Margins View Controller-->
+        <scene sceneID="3fi-dt-RBz">
+            <objects>
+                <viewController storyboardIdentifier="MarginsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MBF-sD-1hC" customClass="MarginsViewController" customModule="Session" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lk5-1p-7DH"/>
+                        <viewControllerLayoutGuide type="bottom" id="rCN-tn-liJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gY5-D2-sK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2r-DC-DNa" customClass="CustomView" customModule="Session" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rCN-tn-liJ" firstAttribute="top" secondItem="p2r-DC-DNa" secondAttribute="bottom" id="BHj-A6-AeV"/>
+                            <constraint firstItem="p2r-DC-DNa" firstAttribute="leading" secondItem="gY5-D2-sK3" secondAttribute="leadingMargin" id="az1-Mx-CcP"/>
+                            <constraint firstItem="p2r-DC-DNa" firstAttribute="top" secondItem="Lk5-1p-7DH" secondAttribute="bottom" id="ivd-TJ-HsL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p2r-DC-DNa" secondAttribute="trailing" id="sRg-fr-CPu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ibCustomView" destination="p2r-DC-DNa" id="u4i-2p-xre"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1t-Ky-7fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1394.4000000000001" y="-280.20989505247377"/>
+        </scene>
+    </scenes>
+</document>

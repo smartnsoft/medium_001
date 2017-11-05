@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if which $PODS_ROOT/SwiftGen/bin/swiftgen >/dev/null; then
+    SRCDIR="$PROJECT_DIR/$TARGET_NAME"
+    $PODS_ROOT/SwiftGen/bin/swiftgen storyboards "$SRCDIR" --output "$SRCDIR/Code/Constants/SwiftGen/Storyboards.swift" -t swift3
+    $PODS_ROOT/SwiftGen/bin/swiftgen xcassets "$SRCDIR/Resources/Assets.xcassets" --output "$SRCDIR/Code/Constants/SwiftGen/Images.swift" -t swift3
+    $PODS_ROOT/SwiftGen/bin/swiftgen colors "$SRCDIR/Resources/colors.txt" --output "$SRCDIR/Code/Constants/SwiftGen/Colors.swift" -t swift3
+    #$PODS_ROOT/SwiftGen/bin/swiftgen fonts "$SRCDIR/Resources/Fonts" --output "$SRCDIR/Code/Constants/SwiftGen/Fonts.swift" -t swift3
+    $PODS_ROOT/SwiftGen/bin/swiftgen strings "$SRCDIR/Resources/fr.lproj/Localizable.strings" --output "$SRCDIR/Code/Constants/SwiftGen/Strings.swift" -t structured-swift3
+else
+    echo "warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen"
+fi
